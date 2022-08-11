@@ -2,9 +2,7 @@ const {sequelize} = require('./db');
 const {Band, Musician} = require('./index')
 
 describe('Band and Musician Models', () => {
-    /**
-     * Runs the code prior to all tests
-     */
+
     beforeAll(async () => {
         // the 'sync' method will create tables based on the model class
         // by setting 'force:true' the tables are recreated each time the 
@@ -13,12 +11,23 @@ describe('Band and Musician Models', () => {
     })
 
     test('can create a Band', async () => {
-        // TODO - test creating a band
-        expect('NO TEST').toBe('EXPECTED VALUE HERE');
+        x = await Band.create({
+            name: "G-unit",
+            genre: "Hip-Hop"
+        });
+        expect(x.name).toBe("G-unit");
+        expect(x.genre).toBe("Hip-Hop");
+
     })
 
     test('can create a Musician', async () => {
-        // TODO - test creating a musician
-        expect('NO TEST').toBe('EXPECTED VALUE HERE');
+
+        y = await Musician.create({
+            name: "Jichael Fackson",
+            instrument: "Guitar"
+        });
+        expect(y.name).toBe("Jichael Fackson");
+        expect(y.instrument).toBe("Guitar");
+
     })
 })

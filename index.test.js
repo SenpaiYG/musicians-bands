@@ -12,10 +12,10 @@ describe('Band and Musician Models', () => {
 
     test('can create a Band', async () => {
         x = await Band.create({
-            name: "G-unit",
-            genre: "Hip-Hop"
+            name: 'G-unit',
+            genre: 'Hip-Hop'
         });
-        expect(x.name).toBe("G-unit");
+        expect(x.name).toBe('G-unit');
         expect(x.genre).toBe("Hip-Hop");
 
     })
@@ -23,8 +23,8 @@ describe('Band and Musician Models', () => {
     test('can create a Musician', async () => {
 
         y = await Musician.create({
-            name: "Jichael Fackson",
-            instrument: "Guitar"
+            name: 'Jichael Fackson',
+            instrument: 'Guitar'
         });
         expect(y.name).toBe("Jichael Fackson");
         expect(y.instrument).toBe("Guitar");
